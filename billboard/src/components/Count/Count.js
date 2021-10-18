@@ -8,6 +8,9 @@ function Count() {
   const incrementByOne = () => setCount(count + 1);
   const incrementByOneEvenCount = () => setEvenCount(count + 1);
 
+//   useRecoilValue: 값만을 불러올 수 있다. 즉 이 훅은 set 함수를 반환하지 않는다.
+// useSetRecoilState: set 함수만을 불러올 수 있다.
+// useRecoilState: 값, set 함수 두가지 다 불러올 수 있다.
   return (
     <div>
       Count: {count}

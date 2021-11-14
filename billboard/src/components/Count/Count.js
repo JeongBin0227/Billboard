@@ -19,6 +19,7 @@ function Count() {
       <button onClick={incrementByOne}>Increment</button>
       <br />
       Even Count: {evenCount ? '짝수' : '홀수'}
+      Test
       <br />
       <button onClick={incrementByOneEvenCount}>Even Increment</button>
       <button onClick={resetCount}>reset</button>

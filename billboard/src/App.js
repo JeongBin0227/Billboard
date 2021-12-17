@@ -1,5 +1,8 @@
+import React from 'react';
 import './App.css';
 import styled from 'styled-components';
+import { RecoilRoot } from 'recoil';
+import Count from './components/Count/Count';
 
 const Header = styled.div`
   background-color: red;
@@ -35,9 +38,10 @@ const Link = styled.div`
 `;
 function App() {
   return (
-    <>
+    <React.Suspense fallback={null}>
       <Header>
         <div>hi</div>
+        <Count />
         <div></div>
         <div></div>
       </Header>
@@ -50,7 +54,7 @@ function App() {
         </Board>
         <Link></Link>
       </Main>
-    </>
+    </React.Suspense>
   );
 }
 

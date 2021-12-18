@@ -39,3 +39,10 @@ const weatherSelector = selector({
   },
 });
 
+export {
+  csSelector,
+  eventsSelector,
+  vacationsSelector,
+  healthSelector,
+  weatherSelector,
+};

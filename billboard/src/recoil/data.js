@@ -14,3 +14,11 @@ const eventsSelector = selector({
   },
 });
 
+const vacationsSelector = selector({
+  key: 'vacationsSelector',
+  get: async () => {
+    const response = await fetch(`${host}/apis/v1/company/vacations`);
+    return await response.json();
+  },
+});
+

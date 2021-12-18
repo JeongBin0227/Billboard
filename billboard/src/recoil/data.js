@@ -1,3 +1,4 @@
+
 const csSelector = selector({
   key: 'csSelector',
   get: async () => {
@@ -26,6 +27,14 @@ const healthSelector = selector({
   key: 'healthSelector',
   get: async () => {
     const response = await fetch(`${host}/apis/v1/health`);
+    return await response.json();
+  },
+});
+
+const weatherSelector = selector({
+  key: 'weatherSelector',
+  get: async () => {
+    const response = await fetch(`${host}/apis/v1/weather`);
     return await response.json();
   },
 });

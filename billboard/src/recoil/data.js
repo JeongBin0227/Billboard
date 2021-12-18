@@ -22,3 +22,11 @@ const vacationsSelector = selector({
   },
 });
 
+const healthSelector = selector({
+  key: 'healthSelector',
+  get: async () => {
+    const response = await fetch(`${host}/apis/v1/health`);
+    return await response.json();
+  },
+});
+

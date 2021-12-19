@@ -14,7 +14,7 @@ const BoardLeftDayTop = styled.div`
   margin: 30px 17px 0px 30px;
 `;
 
-const BoardLeftDayDate = styled.div`
+const BoardLeftDayDate = styled.span`
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -24,7 +24,7 @@ const BoardLeftDayDate = styled.div`
   margin-right: 17px;
 `;
 
-const BoardLeftDaySprint = styled.div`
+const BoardLeftDaySprint = styled.span`
   font-style: normal;
   font-weight: normal;
   font-size: 21px;
@@ -38,7 +38,7 @@ const BoardLeftDayMiddle = styled.div`
   margin: 17px auto 39px 30px;
 `;
 
-const BoardLeftDayIssue = styled.div`
+const BoardLeftDayIssue = styled.span`
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -48,7 +48,7 @@ const BoardLeftDayIssue = styled.div`
   margin-right: 6px;
 `;
 
-const BoardLeftDayIssueNumber = styled.div`
+const BoardLeftDayIssueNumber = styled.span`
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -73,23 +73,55 @@ const BoardLeftDayPeople = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;
 
 const BoardLeftDayBottomBubble = styled.span`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const BoardLeftDayBottomBubbleBox = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   color: #7b7be5;
+  width: 131px;
+  height: 30px;
+  background: #EEEEFF;
+  border-radius: 6px;
 `;
+
+const BoardLeftDayBottomBubbleTriangle = styled.span`
+  width: 0px;
+  height: 0px;
+  border-right: 13px solid #EEEEFF;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-radius: 3px;
+  transform: rotate(-90deg);
+  margin-top: -4px
+`;
+
 
 const BoardLeftDayBottomImoji = styled.span`
   font-size: 40px;
+  transform: scaleX(-1);
 `;
 
 const BoardLeftDayBottomLine = styled.div`
   width: 906px;
   height: 8px;
+  background: #EEEEFF;
+  border-radius: 20px;
+  margin-top: -15px;
+ 
 `;
 const index = () => {
   return (
@@ -99,15 +131,17 @@ const index = () => {
         <BoardLeftDaySprint>96 Sprint</BoardLeftDaySprint>
       </BoardLeftDayTop>
       <BoardLeftDayMiddle>
-        <BoardLeftDayIssue>이번주사내소식</BoardLeftDayIssue>
+        <BoardLeftDayIssue>이번주 사내소식</BoardLeftDayIssue>
         <BoardLeftDayIssueNumber>3</BoardLeftDayIssueNumber>
       </BoardLeftDayMiddle>
       <BoardLeftDayBottom>
         <BoardLeftDayPeople>
-          <BoardLeftDayBottomBubble>다들 일어나세요</BoardLeftDayBottomBubble>
+          <BoardLeftDayBottomBubble></BoardLeftDayBottomBubble>
+            <BoardLeftDayBottomBubbleBox>다들 일어나세요</BoardLeftDayBottomBubbleBox>
+            <BoardLeftDayBottomBubbleTriangle></BoardLeftDayBottomBubbleTriangle>
           <BoardLeftDayBottomImoji>🏃‍♀️</BoardLeftDayBottomImoji>
         </BoardLeftDayPeople>
-        <BoardLeftDayBottomLine>다들일어나세요</BoardLeftDayBottomLine>
+        <BoardLeftDayBottomLine></BoardLeftDayBottomLine>
       </BoardLeftDayBottom>
     </BoardLeftDay>
   );

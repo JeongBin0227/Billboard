@@ -18,8 +18,8 @@ const index = () => {
     <BoardLeft>
       <Search />
       <Day />
-      <Vacation />
       <OKR />
+      <Vacation />
     </BoardLeft>
   );
 };

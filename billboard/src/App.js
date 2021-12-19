@@ -17,32 +17,30 @@ const HeaderContentsWrapper = styled.div`
   height: 72px;
   display: flex;
   justify-content: space-between;
-  `;
+`;
 const HeaderContentsLeft = styled.div`
   display: flex;
   margin-left: 40px;
   margin-top: 24px;
-  margin-down: 24px;
-  `;
+  margin-bottom: 24px;
+`;
 const HeaderContentsRight = styled.div`
   display: flex;
   margin: 24px 40px 24px 0;
-  `;
-const Logo = styled.div`
- 
-  `;
+`;
+const Logo = styled.div``;
 const Issue = styled.div`
   padding: 0 24px 0 20px;
-  `;
+`;
 const Main = styled.div`
-  max-width: 100%;
-  margin: 24px 40px 0 40px;
+  min-width: 1500px;
+  padding: 24px 40px 0 40px;
   height: auto;
   display: flex;
   justify-content: center;
 `;
 const BoardContentsWrapper = styled.div`
-  min-width: 1520px;
+  width: 100%;
   display: grid;
   grid-gap: 32px;
   grid-template-columns: 1.54fr 1fr;
@@ -75,16 +73,10 @@ function App() {
         </HeaderContentsWrapper>
       </Header>
       <Main>
-          <BoardContentsWrapper>
-            <BoardLeft>
-              dsad
-            </BoardLeft>
-            <BoardRight>
-              fff
-            </BoardRight>
-              
-          </BoardContentsWrapper>
-    
+        <BoardContentsWrapper>
+          <BoardLeft>dsad</BoardLeft>
+          <BoardRight>fff</BoardRight>
+        </BoardContentsWrapper>
       </Main>
     </>
   );

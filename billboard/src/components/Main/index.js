@@ -15,7 +15,8 @@ const BoardContentsWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-gap: 32px;
-  grid-template-columns: 1.54fr 1fr;
+  grid-template-columns: 966px 522px;
+  justify-content: center;
 `;
 
 const index = () => {

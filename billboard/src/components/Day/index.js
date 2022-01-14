@@ -94,21 +94,20 @@ const BoardLeftDayBottomBubbleBox = styled.span`
   color: #7b7be5;
   width: 131px;
   height: 30px;
-  background: #EEEEFF;
+  background: #eeeeff;
   border-radius: 6px;
 `;
 
 const BoardLeftDayBottomBubbleTriangle = styled.span`
   width: 0px;
   height: 0px;
-  border-right: 13px solid #EEEEFF;
+  border-right: 13px solid #eeeeff;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   border-radius: 3px;
   transform: rotate(-90deg);
-  margin-top: -4px
+  margin-top: -4px;
 `;
-
 
 const BoardLeftDayBottomImoji = styled.span`
   font-size: 40px;
@@ -118,10 +117,10 @@ const BoardLeftDayBottomImoji = styled.span`
 const BoardLeftDayBottomLine = styled.div`
   width: 906px;
   height: 8px;
-  background: #EEEEFF;
+  background: #eeeeff;
   border-radius: 20px;
   margin-top: -15px;
- 
+
 `;
 const index = () => {
   return (
@@ -137,11 +136,15 @@ const index = () => {
       <BoardLeftDayBottom>
         <BoardLeftDayPeople>
           <BoardLeftDayBottomBubble></BoardLeftDayBottomBubble>
-            <BoardLeftDayBottomBubbleBox>다들 일어나세요</BoardLeftDayBottomBubbleBox>
-            <BoardLeftDayBottomBubbleTriangle></BoardLeftDayBottomBubbleTriangle>
+          <BoardLeftDayBottomBubbleBox>
+            다들 일어나세요
+          </BoardLeftDayBottomBubbleBox>
+          <BoardLeftDayBottomBubbleTriangle></BoardLeftDayBottomBubbleTriangle>
           <BoardLeftDayBottomImoji>🏃‍♀️</BoardLeftDayBottomImoji>
         </BoardLeftDayPeople>
+
         <BoardLeftDayBottomLine></BoardLeftDayBottomLine>
+        
       </BoardLeftDayBottom>
     </BoardLeftDay>
   );

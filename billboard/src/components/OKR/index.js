@@ -24,15 +24,29 @@ const Index = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const okrs = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const okrs = [
+    '식스샵3의 2022년 6월 런칭을 목표로 로드맵/인수조건을 명확히 정의하고, 본격적인 햅 구현 및 연동을 위한 코어 앱 시스템 및 API 구현을 완료한다.',
+    '스프셀의 2022년 6월 런칭을 목표로 로드맵/인수조건을 명확히 정의하고, 본격적인 햅 구현 및 연동을 위한 코어 앱 시스템 및 API 구현을 완료한다.',
+    'PCM통합셀의 2022년 6월 런칭을 목표로 로드맵/인수조건을 명확히 정의하고, 본격적인 햅 구현 및 연동을 위한 코어 앱 시스템 및 API 구현을 완료한다.',
+    '마케팅팀의 2022년 6월 런칭을 목표로 로드맵/인수조건을 명확히 정의하고, 본격적인 햅 구현 및 연동을 위한 코어 앱 시스템 및 API 구현을 완료한다.',
+    '경영지원팀의 2022년 6월 런칭을 목표로 로드맵/인수조건을 명확히 정의하고, 본격적인 햅 구현 및 연동을 위한 코어 앱 시스템 및 API 구현을 완료한다.',
+    '서비스운영팀의 2022년 6월 런칭을 목표로 로드맵/인수조건을 명확히 정의하고, 본격적인 햅 구현 및 연동을 위한 코어 앱 시스템 및 API 구현을 완료한다.',
+  ];
 
   const Base = styled.div``;
 
   const NavButton = styled.button`
-    width: 4px;
-    height: 4px;
-    background-color: #000;
-    opacity: ${({ isActive }) => (isActive ? 0.3 : 0.1)};
+    width: 120px;
+    height: 28px;
+    padding: 5px 12px 5px 12px;
+    border-radius: 6px;
+    border: none;
+    color: #bfbfcc;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    background-color: ${({ isActive }) =>
+      isActive ? '#F2F2F2' : 'transparent'};
   `;
 
   const NavItem = styled.li`
@@ -42,9 +56,8 @@ const Index = () => {
   const Nav = styled.ul`
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 0 30px;
     display: flex;
-    justify-content: center;
     ${NavItem} + ${NavItem} {
       margin-left: 4px;
     }
@@ -101,22 +114,52 @@ const Index = () => {
     <BoardLeftOKR>
       <OKRTitle>식스샵의 OKR👊</OKRTitle>
       <Base onMouseEnter={handleMounseEnter} onMouseLeave={handleMounseLeave}>
+        <Nav>
+          {[
+            '식스샵2 코어셀',
+            '스토어 프론트셀',
+            'PCM 통합셀',
+            '마케팅팀',
+            '경영지원팀',
+            '서비스운영팀',
+          ].map((_, idx) => (
+            <NavItem key={idx} onClick={() => goTo(idx)}>
+              <NavButton isActive={activeIndex === idx}>{_}</NavButton>
+            </NavItem>
+          ))}
+        </Nav>
+        <div
+          style={{
+            backgroundColor: '#F3F5F6',
+            height: '1px',
+            width: '100%',
+            margin: '15px 0',
+          }}
+        ></div>
         <Container>
           <CarouselList>
             {okrs.map((okr, idx) => (
               <CarouselListItem activeIndex={activeIndex} key={idx}>
-                <div>{okr}</div>
+                <div
+                  style={{
+                    padding: '0 32px',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: '16px',
+                      lineHeight: '20.03px',
+                      color: '#667381',
+                      fontWeight: 700,
+                    }}
+                  >
+                    {okr}
+                  </span>
+                </div>
               </CarouselListItem>
             ))}
           </CarouselList>
         </Container>
-        <Nav>
-          {Array.from({ length: okrs.length }).map((_, idx) => (
-            <NavItem key={idx} onClick={() => goTo(idx)}>
-              <NavButton isActive={activeIndex === idx} />
-            </NavItem>
-          ))}
-        </Nav>
       </Base>
     </BoardLeftOKR>
   );

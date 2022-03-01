@@ -1,5 +1,14 @@
 import styled from 'styled-components';
-
+import React from 'react';
+// import { useRecoilState, useRecoilValue } from 'recoil';
+// import { countState } from '../../recoil/count';
+// import {
+//   csSelector,
+//   eventsSelector,
+//   vacationsSelector,
+//   healthSelector,
+//   weatherSelector,
+// } from '../../recoil/data';
 const BoardRightCS = styled.div`
   height: 255px;
   display: grid;
@@ -15,8 +24,8 @@ const CSTomorrow = styled.div`
 `;
 
 const CSTomorrowTop = styled.div`
- display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 const CSTomorrowTopText = styled.span`
@@ -26,7 +35,7 @@ const CSTomorrowTopText = styled.span`
   font-size: 28px;
   line-height: 35px;
   letter-spacing: -0.01em;
-  color: #222F3C;
+  color: #222f3c;
 `;
 
 const CSTomorrowTopDay = styled.span`
@@ -39,11 +48,10 @@ const CSTomorrowTopDay = styled.span`
   padding: 5px 12px 5px 12px;
   display: flex;
   align-items: center;
-  background: #EEEEFF;
+  background: #eeeeff;
   border-radius: 6px;
-  color: #7B7BE5;
+  color: #7b7be5;
 `;
-
 
 const CSTomorrowBottom = styled.div`
   margin: 0 28px 25px 28px;
@@ -72,7 +80,7 @@ const CSTomorrow1Profile = styled.div`
   border-radius: 527px;
   width: 60px;
   height: 60px;
-  background-color: #EEEEFF;
+  background-color: #eeeeff;
   margin-bottom: 12px;
 `;
 
@@ -86,9 +94,9 @@ const CSTomorrow1People = styled.div`
   padding: 5px 12px 5px 12px;
   display: flex;
   align-items: center;
-  background: #EEEEFF;
+  background: #eeeeff;
   border-radius: 6px;
-  color: #7B7BE5;
+  color: #7b7be5;
 `;
 
 const CSTomorrow2 = styled.div`
@@ -111,7 +119,7 @@ const CSTomorrow2Profile = styled.div`
   border-radius: 527px;
   width: 60px;
   height: 60px;
-  background-color: #EEEEFF;
+  background-color: #eeeeff;
   margin-bottom: 12px;
 `;
 
@@ -125,9 +133,9 @@ const CSTomorrow2People = styled.div`
   padding: 5px 12px 5px 12px;
   display: flex;
   align-items: center;
-  background: #EEEEFF;
+  background: #eeeeff;
   border-radius: 6px;
-  color: #7B7BE5;
+  color: #7b7be5;
 `;
 
 const CSTomorrow3 = styled.div`
@@ -150,7 +158,7 @@ const CSTomorrow3Profile = styled.div`
   border-radius: 527px;
   width: 60px;
   height: 60px;
-  background-color: #EEEEFF;
+  background-color: #eeeeff;
   margin-bottom: 12px;
 `;
 
@@ -164,9 +172,9 @@ const CSTomorrow3People = styled.div`
   padding: 5px 12px 5px 12px;
   display: flex;
   align-items: center;
-  background: #EEEEFF;
+  background: #eeeeff;
   border-radius: 6px;
-  color: #7B7BE5;
+  color: #7b7be5;
 `;
 
 const CSHoliday = styled.div`
@@ -178,8 +186,8 @@ const CSHoliday = styled.div`
 `;
 
 const CSHolidayTop = styled.div`
- display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 const CSHolidayTopText = styled.span`
@@ -189,13 +197,22 @@ const CSHolidayTopText = styled.span`
   font-size: 28px;
   line-height: 35px;
   letter-spacing: -0.01em;
-  color: #222F3C;
+  color: #222f3c;
 `;
 
-const CSHolidayBottom = styled.div`
-`;
+const CSHolidayBottom = styled.div``;
 
-const index = () => {
+const CS = () => {
+  // const user1 = useRecoilValue(csSelector);
+  // const user2 = useRecoilValue(eventsSelector);
+  // const user3 = useRecoilValue(vacationsSelector);
+  // const user4 = useRecoilValue(healthSelector);
+  // const user5 = useRecoilValue(weatherSelector);
+  // console.log(user1);
+  // console.log(user2);
+  // console.log(user3);
+  // console.log(user4);
+  // console.log(user5);
   return (
     <BoardRightCS>
       <CSTomorrow>
@@ -207,37 +224,40 @@ const index = () => {
           <CSTomorrow1>
             <CSTomorrow1Time>오전</CSTomorrow1Time>
             <CSTomorrow1Profile></CSTomorrow1Profile>
-            <CSTomorrow1People>
-              다혜
-            </CSTomorrow1People>
+            <CSTomorrow1People>정빈</CSTomorrow1People>
           </CSTomorrow1>
           <CSTomorrow2>
             <CSTomorrow2Time>오후</CSTomorrow2Time>
             <CSTomorrow2Profile></CSTomorrow2Profile>
-            <CSTomorrow2People>
-              다혜
-            </CSTomorrow2People>
+            <CSTomorrow2People>웅재</CSTomorrow2People>
           </CSTomorrow2>
-      
+
           <CSTomorrow3>
             <CSTomorrow3Time>야간</CSTomorrow3Time>
             <CSTomorrow3Profile></CSTomorrow3Profile>
-            <CSTomorrow3People>
-              다혜
-            </CSTomorrow3People>
+            <CSTomorrow3People>태경</CSTomorrow3People>
           </CSTomorrow3>
         </CSTomorrowBottom>
       </CSTomorrow>
-        <CSHoliday>
+      <CSHoliday>
         <CSHolidayTop>
-          <CSHolidayTopText>휴일의 CS
-           </CSHolidayTopText>
-         
-        </CSHolidayTop>  
-          <CSHolidayBottom>아래</CSHolidayBottom>
-        </CSHoliday>
-   </BoardRightCS>
-   );
+          <CSHolidayTopText>휴일의 CS</CSHolidayTopText>
+        </CSHolidayTop>
+        <CSTomorrowBottom>
+          <CSTomorrow1>
+            <CSTomorrow1Time>오전</CSTomorrow1Time>
+            <CSTomorrow1Profile></CSTomorrow1Profile>
+            <CSTomorrow1People>나래</CSTomorrow1People>
+          </CSTomorrow1>
+          <CSTomorrow2>
+            <CSTomorrow2Time>오후</CSTomorrow2Time>
+            <CSTomorrow2Profile></CSTomorrow2Profile>
+            <CSTomorrow2People>정빈</CSTomorrow2People>
+          </CSTomorrow2>
+        </CSTomorrowBottom>
+      </CSHoliday>
+    </BoardRightCS>
+  );
 };
 
-export default index;
+export default CS;

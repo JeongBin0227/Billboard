@@ -16,10 +16,14 @@ const SearchImg = styled.img`
 
 const SearchText = styled.input`
   font-weight: normal;
+  width: 90%;
   font-size: 18px;
   line-height: 23px;
   color: #bfbfcc;
-  padding-top: 27px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
 `;
 
 const Index = () => {

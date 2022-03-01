@@ -120,7 +120,6 @@ const BoardLeftDayBottomLine = styled.div`
   background: #eeeeff;
   border-radius: 20px;
   margin-top: -15px;
-
 `;
 const index = () => {
   return (
@@ -143,8 +142,16 @@ const index = () => {
           <BoardLeftDayBottomImoji>🏃‍♀️</BoardLeftDayBottomImoji>
         </BoardLeftDayPeople>
 
-        <BoardLeftDayBottomLine></BoardLeftDayBottomLine>
-        
+        <BoardLeftDayBottomLine>
+          <div
+            style={{
+              backgroundColor: '#7B7BE5',
+              height: '100%',
+              width: '53%',
+              borderRadius: '20px',
+            }}
+          ></div>
+        </BoardLeftDayBottomLine>
       </BoardLeftDayBottom>
     </BoardLeftDay>
   );
